@@ -28,12 +28,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/", "/welcome", "/adverts/*", "/users/**", "/comments/*").permitAll()
-//                .antMatchers("/chats/**","/messages/*","/users/**").hasAnyRole( "USER", "ADMIN")
+                .antMatchers("/", "/main", "/users/**", "/gre").permitAll()
+                .antMatchers("data/**").hasAnyRole( "USER", "ADMIN")
                 .antMatchers("/admin").hasAnyRole("ADMIN")
-                .and().formLogin().loginPage("/login").permitAll()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/main")
+                .failureUrl("/login?error=true")
+                .permitAll()
                 .and().logout().permitAll()
-                .and().logout().logoutSuccessUrl("/welcome").deleteCookies("JSESSIONID")
+                .and().logout().logoutSuccessUrl("/gre").deleteCookies("JSESSIONID")
                 .and().csrf().disable();
     }
 

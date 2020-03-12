@@ -1,0 +1,23 @@
+@import '../../../../../styles/global';
+
+nav {
+  display: flex;
+  height: 100%;
+
+  .link-container {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-size: 1.3em;
+      color: $whiteColor;
+      text-decoration: none;
+    }
+  }
+
+  .link-container:hover {
+    background-color: $secondaryColor;
+  }
+}

@@ -22,6 +22,7 @@ public class PageController {
         mapping = new HashMap<>();
 
         mapping.put("main", "index");
+        mapping.put("gre", "greeting");
     }
 
     @GetMapping

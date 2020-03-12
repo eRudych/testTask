@@ -1,0 +1,10 @@
+@import '../../../styles/global';
+
+.card {
+  background-color: $whiteColor;
+  padding: $freeSpace;
+  display: inline-block;
+  border-radius: 7px;
+  border: 1px solid $greyColor;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
