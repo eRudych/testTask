@@ -1,0 +1,16 @@
+@import '../../../styles/global';
+
+.chart-card{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+
+  .chart-container {
+    border-left: 1px solid $greyColor;
+    flex-grow: 2;
+  }
+
+  .list-container {
+    flex-grow: 1;
+  }
+}

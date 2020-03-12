@@ -1,0 +1,14 @@
+@import '../../../../styles/global';
+
+.not-found-page {
+  display: flex;
+  justify-content: center;
+
+  .not-found {
+    h1 {
+      border-bottom: 1px solid $greyColor;
+      margin-bottom: $freeSpace;
+    }
+  }
+}
+

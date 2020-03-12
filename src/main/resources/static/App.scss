@@ -1,0 +1,15 @@
+@import "./styles/global";
+
+@import "./styles/reset";
+@import "./styles/typography";
+@import "./styles/links";
+@import "./styles/grid";
+
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  padding-top: $headerHeight + $freeSpace;
+  background-color: #dddddd;
+}
